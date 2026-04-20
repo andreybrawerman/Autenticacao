@@ -79,7 +79,6 @@ public class AuthHandler {
                 return;
             }
 
-            // 4. CORREÇÃO: Usando request.password e request.name
             String hashDaSenha = BCrypt.hashpw(request.password, BCrypt.gensalt(12));
             String roleDefinido = (request.role != null) ? request.role : "UTILIZADOR";
             Usuario novoUsuario = new Usuario(request.name, request.email, hashDaSenha, roleDefinido);

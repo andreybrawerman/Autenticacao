@@ -18,7 +18,7 @@ public class UsuarioRepository {
 
         return usuarios.stream()
                 .filter(u -> u.getEmail().equalsIgnoreCase(email))
-                .findFirst(); // 4. Retorna um Optional
+                .findFirst();
     }
 
     public List<Usuario> findAll() {
